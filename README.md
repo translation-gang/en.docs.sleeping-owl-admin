@@ -1,6 +1,6 @@
 # This is a documentation translation project for [SleepingOwl Admin](https://github.com/LaravelRUS/SleepingOwlAdmin)
 
-Docs are being translated from Russian to English. See #1 for details.
+Docs are being translated from Russian to English. See [#1](https://github.com/translation-gang/en.docs.sleeping-owl-admin/issues/1) for details.
 
 ## Contribution HowTo
 
