@@ -2,14 +2,15 @@
 
  - [Custom Middleware](#middleware)
 
-SleepingOwl Admin uses Laravel authentication by `middleware`.
+SleepingOwl Admin doesn't use authentication by default, that means access to the Admin Panel is not restricted. You can set up restricted access using middleware.
 
-In your app you should run artisan command: (See https://laravel.com/docs/5.2/authentication#authentication-quickstart)
+The easiest way is to use [Laravel Authentication](https://laravel.com/docs/5.4/authentication#authentication-quickstart) provided by Laravel itself. You can get this done by running Artisan command:
+
 ```bash
 $ php artisan make:auth
 ```
 
-And after add middleware `auth` to `config/sleeping_owl.php`
+And then you should add `auth` to the middleware settings in the `config/sleeping_owl.php` configuration file.
 
 **Example**
 ```php
@@ -22,12 +23,14 @@ And after add middleware `auth` to `config/sleeping_owl.php`
 ...
 ```
 
+Thereby you have an ability to configure access rules to the Admin Panel by creating your own middlewares.
+
 ---
 
 <a name="middleware"></a>
 ## Custom Middleware
 
-You cat create custom middleware class< for example `App\Http\Middleware\AdminAuthenticate`
+You can create custom middleware class, for example `App\Http\Middleware\AdminAuthenticate`
 
 ```php
 <?php
